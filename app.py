@@ -45,24 +45,26 @@ def predict():
     details = request.form.get("details")
     rating = float(request.form.get("rating"))
     reviews = int(request.form.get("reviews"))
-    name=request.form.get("name")
-    email=request.form.get("email")
+    name = request.form.get("name")
+    email = request.form.get("email")
+    
     company_en = safe_transform(company_encoder, company)
     features_en = safe_transform(feature_encoder, features)
     details_en = safe_transform(detail_encoder, details)
     input_data = np.array([rating, reviews, features_en, company_en, details_en]).reshape(1, -1)
-    data1={
-        "name":name,
-        "email":email,
-        "Intrested phone":company
+    
+    output = model.predict(input_data)
+    predicted_price = str(output[0].round())
+    
+    data1 = {
+        "name": name,
+        "email": email,
+        "Intrested phone": company,
+        "Estimated Price": predicted_price
     }
     data.insert_one(data1)
     
-    output = model.predict(input_data)
-
-
-    output = str(output[0].round())
-    return render_template("index.html", all_data=all_data, output=output)
+    return render_template("index.html", all_data=all_data, output=predicted_price)
 
 if __name__ == "__main__":
     app.run(debug=True)

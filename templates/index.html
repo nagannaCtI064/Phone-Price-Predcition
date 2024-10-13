@@ -96,10 +96,17 @@
     </div>
 </div>
 
-<h3>
-   <center> Predicted Price is:   {{output}}</center>
-</h3>
-
+{% if output %}
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="alert alert-success text-center" role="alert">
+                    <h3>Predicted Price: ₹{{ output }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
 
 
 <!-- Bootstrap JS -->
