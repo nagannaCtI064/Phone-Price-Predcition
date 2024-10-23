@@ -47,7 +47,7 @@ This is a Flask web application that predicts the price of mobile phones based o
 
 3. Install the required packages:
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
