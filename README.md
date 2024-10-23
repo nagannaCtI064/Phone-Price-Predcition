@@ -34,7 +34,7 @@ This is a Flask web application that predicts the price of mobile phones based o
 1. Clone the repository:
 
    ```
-   git clone https://github.com/nagannaCtI064/Phone-Price-Predcition.git
+   git clone https://github.com/nagannaCtI064/Phone-Price-Predcition.git 
    cd phone-price-prediction
    ```
 
@@ -69,7 +69,7 @@ This is a Flask web application that predicts the price of mobile phones based o
 
 1. Run the application:
 
-   ```bash
+   ```
    python app.py
    ```
 
