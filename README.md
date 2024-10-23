@@ -1,4 +1,4 @@
-```markdown
+
 # Phone Price Prediction App
 
 This is a Flask web application that predicts the price of mobile phones based on user inputs, such as company, features, details, rating, and reviews. The app leverages machine learning models and stores user data in a MongoDB database.
